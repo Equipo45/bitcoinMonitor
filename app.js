@@ -29,7 +29,8 @@ let monitor = async() => {
     //Las anomalias se detectan con este metodo https://eurekastatistics.com/using-the-median-absolute-deviation-to-find-outliers/
     //Uso de la desviacion media
     if(data.is_anomaly){
-        webhook.send("---------------------------------------------------\nPrice Detected!"+"\nPrice: "+ data.last+"\nVolumen: "+ data.converted_volume.usd+"\nTimestamp UTC: "+ data.timestamp).catch(console.error);
+
+        webhook.send(criptomoneda.toUpperCase+"\n---------------------------------------------------\nPrice Detected!"+"\nPrice: "+ data.last+"\nVolumen: "+ data.converted_volume.usd+"\nTimestamp UTC: "+ data.timestamp).catch(console.error);
         console.log("---------------------------------------------------\nLast one Send at <"+data.timestamp+">")
     }
     
