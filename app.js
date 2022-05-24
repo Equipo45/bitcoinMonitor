@@ -30,7 +30,7 @@ let monitor = async() => {
     //Uso de la desviacion media
     if(data.is_anomaly){
 
-        webhook.send(criptomoneda.toUpperCase+"\n---------------------------------------------------\nPrice Detected!"+"\nPrice: "+ data.last+"\nVolumen: "+ data.converted_volume.usd+"\nTimestamp UTC: "+ data.timestamp).catch(console.error);
+        webhook.send(criptomoneda.toUpperCase()+"\n---------------------------------------------------\nPrice Detected!"+"\nPrice: "+ data.last+"\nVolumen: "+ data.converted_volume.usd+"\nTimestamp UTC: "+ data.timestamp).catch(console.error);
         console.log("---------------------------------------------------\nLast one Send at <"+data.timestamp+">")
     }
     
